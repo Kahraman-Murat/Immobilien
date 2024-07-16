@@ -1,10 +1,15 @@
+
 using Immobilien.DataAccess.Context;
 using Microsoft.EntityFrameworkCore;
 using MongoDB.Driver;
+using Immobilien.WebUI.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+
+builder.Services.AddServiceExtensions();
 
 
 var mongoDatabase = new MongoClient(builder.Configuration.GetConnectionString("MongoConnection")).GetDatabase(builder.Configuration.GetSection("DatabaseName").Value);

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Immobilien.Business.Abstract
 {
-    public interface IFeatueService : IGenericService<Feature>
+    public interface IFeatureService : IGenericService<Feature>
     {
     }
 }

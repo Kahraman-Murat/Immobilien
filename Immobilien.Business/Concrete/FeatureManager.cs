@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Immobilien.Business.Concrete
 {
-    public class FeatureManager : GenericManager<Feature>, IFeatueService
+    public class FeatureManager : GenericManager<Feature>, IFeatureService
     {
         public FeatureManager(IGenericDal<Feature> genericDal) : base(genericDal)
         {
