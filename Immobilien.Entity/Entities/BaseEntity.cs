@@ -9,8 +9,7 @@ using System.Threading.Tasks;
 namespace Immobilien.Entity.Entities
 {
     public class BaseEntity
-    {
-        [BsonId]
+    {       
         public ObjectId Id { get; set; }
     }
 }
