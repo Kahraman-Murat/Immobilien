@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Immobilien.Entity.Entities
 {
-    public class Future : BaseEntity
+    public class Feature : BaseEntity
     {
         public string ImageUrl { get; set; }
         public string Title { get; set; }

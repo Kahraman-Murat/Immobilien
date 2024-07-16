@@ -21,7 +21,7 @@ namespace Immobilien.DataAccess.Context
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<Counter> Counters { get; set; }
         public DbSet<Deal> Deals { get; set; }
-        public DbSet<Feature> Features { get; set; }
+        public DbSet<MongoDB.Driver.Core.Misc.Feature> Features { get; set; }
         public DbSet<Message> Messages { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Quest> Quests { get; set; }
