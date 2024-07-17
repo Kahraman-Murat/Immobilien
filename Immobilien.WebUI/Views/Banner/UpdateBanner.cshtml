@@ -1,0 +1,20 @@
+﻿@model UpdateBannerDto
+@{
+    ViewData["Title"] = "Banner Güncelleme Sayfasi";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <input type="hidden" asp-for="Id"/>
+    <label>Resim Url</label>
+    <input type="text" asp-for="ImageUrl" class="form-control" />
+    <br />
+    <label>Sehir</label>
+    <input type="text" asp-for="City" class="form-control" />
+    <br />
+    <label>Baslik</label>
+    <input type="text" asp-for="Title" class="form-control" />
+    <br />
+    <button class="btn btn-outline-dark">Güncelle</button>
+</form>
+

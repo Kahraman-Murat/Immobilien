@@ -3,6 +3,7 @@ using Immobilien.DataAccess.Context;
 using Microsoft.EntityFrameworkCore;
 using MongoDB.Driver;
 using Immobilien.WebUI.Extensions;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddServiceExtensions();
+builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
 
 var mongoDatabase = new MongoClient(builder.Configuration.GetConnectionString("MongoConnection")).GetDatabase(builder.Configuration.GetSection("DatabaseName").Value);

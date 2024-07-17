@@ -21,7 +21,7 @@ namespace Immobilien.DataAccess.Context
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<Counter> Counters { get; set; }
         public DbSet<Deal> Deals { get; set; }
-        public DbSet<MongoDB.Driver.Core.Misc.Feature> Features { get; set; }
+        public DbSet<Entity.Entities.Feature> Features { get; set; }
         public DbSet<Message> Messages { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Quest> Quests { get; set; }
@@ -33,7 +33,7 @@ namespace Immobilien.DataAccess.Context
             modelBuilder.Entity<Contact>().ToCollection("Contacts");
             modelBuilder.Entity<Counter>().ToCollection("Counters");
             modelBuilder.Entity<Deal>().ToCollection("Deals");
-            modelBuilder.Entity<Feature>().ToCollection("Features");
+            modelBuilder.Entity<Entity.Entities.Feature>().ToCollection("Features");
             modelBuilder.Entity<Message>().ToCollection("Messages");
             modelBuilder.Entity<Product>().ToCollection("Products");
             modelBuilder.Entity<Quest>().ToCollection("Quests");
