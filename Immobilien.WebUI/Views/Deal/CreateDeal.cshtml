@@ -1,0 +1,42 @@
+﻿@model CreateDealDto
+@{
+    ViewData["Title"] = "Yeni Teklif Ekleme Sayfasi";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <label>Ilan Türü</label>
+    <input type="text" asp-for="Type" class="form-control" />
+    <br />
+    <label>Resim Türü</label>
+    <input type="text" asp-for="ImageUrl" class="form-control" />
+    <br />
+    <label>Baslik</label>
+    <input type="text" asp-for="Title" class="form-control" />
+    <br />
+    <label>Aciklama</label>
+    <input type="text" asp-for="Description" class="form-control" />
+    <br />
+    <label>m2</label>
+    <input type="text" asp-for="Square" class="form-control" />
+    <br />
+    <label>Kat</label>
+    <input type="text" asp-for="Floor" class="form-control" />
+    <br />
+    <label>Oda Sayisi</label>
+    <input type="number" asp-for="RoomCount" class="form-control" />
+    <br />
+    <label>Park Alani</label>
+  @*<input type="text" asp-for="HasParkingArea" class="form-control" /> *@
+    <select asp-for="HasParkingArea" class="form-control">
+        <option>Seciniz</option>
+        <option value="true">Var</option>
+        <option value="false">Yok</option>
+    </select>
+    <br />
+    <label>Ödeme Türü</label>
+    <input type="text" asp-for="PaymentType" class="form-control" />
+    <br />
+    <button class="btn btn-outline-dark">Kaydet</button>
+</form>
+
