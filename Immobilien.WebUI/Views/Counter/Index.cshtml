@@ -22,7 +22,8 @@
             <td>@item.Title</td>
             <td>@item.Count</td>
             <td>
-                <a asp-controller="Counter" asp-action="DeleteCounter" asp-route-id="@item.Id" class="btn btn-outline-danger">Sil</a>
+                @* <a asp-controller="Counter" asp-action="DeleteCounter" asp-route-id="@item.Id" class="btn btn-outline-danger">Sil</a> *@
+                <button onclick="DeleteRecord('/Counter/DeleteCounter/@item.Id')" class="btn btn-outline-danger">Sil</button>
                 <a asp-controller="Counter" asp-action="UpdateCounter" asp-route-id="@item.Id" class="btn btn-outline-info">Güncelle</a>
             </td>
         </tr>
