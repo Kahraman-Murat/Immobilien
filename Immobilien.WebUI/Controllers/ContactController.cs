@@ -31,7 +31,7 @@ namespace Immobilien.WebUI.Controllers
             return RedirectToAction("Index");
         }
 
-        public IActionResult CreateContact(ObjectId id)
+        public IActionResult CreateContact()
         {
             return View();
         }

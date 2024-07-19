@@ -1,0 +1,28 @@
+﻿@model CreateMessageDto
+@{
+    ViewData["Title"] = "Yeni Mesaj Ekleme Sayfasi";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <label>Mesaj Tarihi</label>
+    <input type="datetime" asp-for="MessageDate" class="form-control" />
+    <br />
+    <label>Email Adresi</label>
+    <input type="text" asp-for="Email" class="form-control" />
+    <br />
+    <label>Ad Soyad</label>
+    <input type="text" asp-for="Name" class="form-control" />
+    <br />
+    <label>Konu</label>
+    <input type="text" asp-for="Subject" class="form-control" />
+    <br />
+    <label>Mesaj Metni</label>
+    <textarea asp-for="MessageContent" class="form-control" rows="10"></textarea>
+    <br /> 
+
+    <button class="btn btn-outline-dark">Kaydet</button>
+</form>
+
+
+

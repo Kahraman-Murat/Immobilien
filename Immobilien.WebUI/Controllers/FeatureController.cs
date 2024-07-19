@@ -32,7 +32,7 @@ namespace Immobilien.WebUI.Controllers
             return RedirectToAction("Index");
         }
 
-        public IActionResult CreateFeature(ObjectId id)
+        public IActionResult CreateFeature()
         {
             return View();
         }
