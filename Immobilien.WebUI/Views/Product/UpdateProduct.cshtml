@@ -1,0 +1,46 @@
+﻿@model UpdateProductDto
+@{
+    ViewData["Title"] = "Gayrimenkul Güncelleme Sayfasi";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <input type="hidden" asp-for="Id" />
+    <label>Resim Url</label>
+    <input type="text" asp-for="ImageUrl" class="form-control" />
+    <br />
+    <label>Baslik</label>
+    <input type="text" asp-for="Title" class="form-control" />
+    <br />
+    <label>Kategori</label>
+    <select asp-for="Category" class="form-control">
+        <option>Kategori Seciniz</option>
+        <option value="Modern">Modern</option>
+        <option value="Cati Kati">Cati Kati</option>
+        <option value="Lüks">Lüks</option>
+        <option value="Müstakil">Müstakil</option>
+        <option value="Apartman Kati">Apartman Kati</option>
+    </select>
+    <br />
+    <label>Fiyat</label>
+    <input type="text" asp-for="Price" class="form-control" />
+    <br />
+    <label>Odasi Sayisi</label>
+    <input type="number" asp-for="BedRoomCount" class="form-control" />
+    <br />
+    <label>Banyo Sayisi</label>
+    <input type="number" asp-for="BathRoomCount" class="form-control" />
+    <br />
+    <label>Alani</label>
+    <input type="text" asp-for="Area" class="form-control" />
+    <br />
+    <label>Kati</label>
+    <input type="text" asp-for="Floor" class="form-control" />
+    <br />
+    <label>Park Yeri Sayisi</label>
+    <input type="number" asp-for="ParkingCount" class="form-control" />
+    <br />
+
+    <button class="btn btn-outline-dark">Güncelle</button>
+</form>
+

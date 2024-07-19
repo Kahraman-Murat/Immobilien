@@ -1,0 +1,47 @@
+﻿@model ResultProductDto
+@{
+    ViewData["Title"] = "Gayrimenkul Detaylari Sayfasi";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table class="table table-striped">
+    <tr>
+        <th>Resim:</th>
+        <td><img src="@Model.ImageUrl" style="height:600px;width:800px" /></td>
+    </tr>
+    <tr>
+        <th>Baslik:</th>
+        <td>@Model.Title</td>
+    </tr>
+    <tr>
+        <th>Kategori:</th>
+        <td>@Model.Category</td>
+    </tr>
+    <tr>
+        <th>Fiyat:</th>
+        <td>@Model.Price</td>
+    </tr>
+    <tr>
+        <th>Odasi Sayisi:</th>
+        <td>@Model.BedRoomCount</td>
+    </tr>
+    <tr>
+        <th>Banyo Sayisi:</th>
+        <td>@Model.BathRoomCount</td>
+    </tr>
+    <tr>
+        <th>Alani:</th>
+        <td>@Model.Area</td>
+    </tr>
+    <tr>
+        <th>Kati:</th>
+        <td>@Model.Floor</td>
+    </tr>
+    <tr>
+        <th>Park Yeri Sayisi:</th>
+        <td>@Model.ParkingCount</td>
+    </tr>
+</table>
+
+<a asp-controller="Product" asp-action="Index" class="btn btn-dark">Gayrimenkuller Sayfasina Geri Dön</a>
+
