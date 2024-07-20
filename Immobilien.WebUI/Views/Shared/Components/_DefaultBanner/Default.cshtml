@@ -1,0 +1,17 @@
+﻿@model List<ResultBannerDto>
+
+<div class="main-banner">
+    <div class="owl-carousel owl-banner">
+
+        @foreach(var item in Model)
+        { 
+            <div class="item item-1" style="background-image:url( @item.ImageUrl )">
+                <div class="header-text">
+                    <span class="category">@item.City, <em> @item.Country</em></span>
+                    <h2>Hurry!<br>@item.Title</h2>
+                </div>
+            </div>
+        }
+
+    </div>
+</div>
