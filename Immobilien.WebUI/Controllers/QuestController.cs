@@ -66,7 +66,18 @@ namespace Immobilien.WebUI.Controllers
         [HttpPost]
         public async Task<IActionResult> UpdateQuest(UpdateQuestDto updateQuestDto)
         {
+            ModelState.Clear();
             var quest = _mapper.Map<Quest>(updateQuestDto);
+            var validator = new QuestionValidator();
+            var result = validator.Validate(quest);
+            if (!result.IsValid)
+            {
+                result.Errors.ForEach(x =>
+                {
+                    ModelState.TryAddModelError(x.PropertyName, x.ErrorMessage);
+                });
+                return View();
+            }
             await _questService.TUpdateAsync(quest);
             return RedirectToAction("Index");
         }
