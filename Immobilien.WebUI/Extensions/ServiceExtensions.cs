@@ -34,6 +34,9 @@ namespace Immobilien.WebUI.Extensions
             services.AddScoped<IQuestDal, EfQuestDal>();
             services.AddScoped<IQuestService, QuestManager>();
 
+            services.AddScoped<ISubHeaderDal, EfSubHeaderDal>();
+            services.AddScoped<ISubHeaderService, SubHeaderManager>();
+
             services.AddScoped<IVideoDal, EfVideoDal>();
             services.AddScoped<IVideoService, VideoManager>();
 

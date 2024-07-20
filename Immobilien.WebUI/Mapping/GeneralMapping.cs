@@ -7,6 +7,7 @@ using Immobilien.Dto.Dtos.FeatureDtos;
 using Immobilien.Dto.Dtos.MessageDtos;
 using Immobilien.Dto.Dtos.ProductDtos;
 using Immobilien.Dto.Dtos.QuestDtos;
+using Immobilien.Dto.Dtos.SubHeaderDtos;
 using Immobilien.Dto.Dtos.VideoDtos;
 using Immobilien.Entity.Entities;
 
@@ -47,6 +48,10 @@ namespace Immobilien.WebUI.Mapping
             CreateMap<ResultQuestDto, Quest>().ReverseMap();
             CreateMap<UpdateQuestDto, Quest>().ReverseMap();
             CreateMap<CreateQuestDto, Quest>().ReverseMap();
+
+            CreateMap<ResultSubHeaderDto, SubHeader>().ReverseMap();
+            CreateMap<UpdateSubHeaderDto, SubHeader>().ReverseMap();
+            CreateMap<CreateSubHeaderDto, SubHeader>().ReverseMap();
 
             CreateMap<ResultVideoDto, Video>().ReverseMap();
             CreateMap<UpdateVideoDto, Video>().ReverseMap();
