@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using MongoDB.Driver;
 using Immobilien.WebUI.Extensions;
 using System.Reflection;
+using FluentValidation;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,6 +21,9 @@ builder.Services.AddDbContext<ImmobilienContext>(option =>
 {
     option.UseMongoDB(mongoDatabase.Client, mongoDatabase.DatabaseNamespace.DatabaseName);
 });
+
+//FluentValidation 
+builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 
 
 builder.Services.AddControllersWithViews();
