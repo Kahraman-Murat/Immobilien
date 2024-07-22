@@ -1,0 +1,33 @@
+﻿@model List<ResultVideoDto>
+
+@{
+    int count = 0;
+}
+
+<div class="video section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 offset-lg-4">
+                <div class="section-heading text-center">
+                    <h6>| Tanitim Videomuzu Izleyin</h6>
+                    <h2>Daha Yakindan Görün & Farkli Hissedin</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="video-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1">
+                @foreach (var item in Model)
+                {
+                    <div class="video-frame">
+                        <iframe width="780" height="440" src="@item.VideoUrl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
