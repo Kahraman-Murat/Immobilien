@@ -6,9 +6,9 @@ In this project;
 
 Asp.NET Core MVC,
 
-EntityFramework and MongoDB,
+EntityFrameworkCore and MongoDB,
 
-Asp.Net Identity,
+Asp.Net Core Identity,
 
 Multi-Tiered Architecture,
 
