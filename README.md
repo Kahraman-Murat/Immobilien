@@ -1,20 +1,12 @@
-This project is a study with a User Interface and Admin panel that includes information about a simple Real Estate Introduction and Sale.
+# Real Estate Introduction and Sale Project
 
+This project is a study involving a User Interface and Admin panel for a simple Real Estate Introduction and Sale.
 
-In this project;
+## Technologies and Patterns Used
 
-
-Asp.NET Core MVC,
-
-EntityFrameworkCore and MongoDB,
-
-Asp.Net Core Identity,
-
-Multi-Tiered Architecture,
-
-Generic Repository Pattern,
-
-Automapper,
-
-
-were used.
+- **ASP.NET Core MVC**
+- **EntityFrameworkCore and MongoDB**
+- **ASP.NET Core Identity**
+- **Multi-Tiered Architecture**
+- **Generic Repository Pattern**
+- **Automapper**
