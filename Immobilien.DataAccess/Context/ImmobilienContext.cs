@@ -1,5 +1,7 @@
 ﻿using Immobilien.Entity.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using MongoDB.Bson;
 using MongoDB.Driver.Core.Misc;
 using MongoDB.EntityFrameworkCore.Extensions;
 using System;
@@ -10,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Immobilien.DataAccess.Context
 {
-    public class ImmobilienContext : DbContext
+    public class ImmobilienContext : IdentityDbContext<AppUser,AppRole,ObjectId>
     {
         public ImmobilienContext(DbContextOptions options) : base(options)
         {
